@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy policy, LaunchPal</title>
+    <meta name="description" content="What the LaunchPal Chrome extension reads, what it stores, and the one network call it makes." />
+    <link rel="icon" href="icons/128.png" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #ffffff;
+        --surface: #fafafc;
+        --border: rgba(0, 0, 0, 0.08);
+        --text: #1d1d1f;
+        --muted: #5f5f66;
+        --faint: #76767c;
+        --accent: #0066cc;
+        --font: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+      a { color: var(--accent); }
+      h1 { font-size: 34px; letter-spacing: -0.01em; margin: 0 0 8px; font-weight: 500; }
+      h2 { font-size: 20px; margin: 36px 0 8px; font-weight: 500; }
+      p, li { color: var(--muted); }
+      .updated { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+      .back { font-size: 14px; text-decoration: none; }
+      ul { padding-left: 20px; }
+      code { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1px 5px; font-size: 14px; }
+      footer { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 20px; font-size: 13px; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="./">&larr; LaunchPal</a>
+      <h1>Privacy policy</h1>
+      <p class="updated">Last updated: 5 November 2026</p>
+
+      <p>
+        LaunchPal is a Chrome extension that audits websites. This page says exactly what it touches and
+        what leaves your browser. It applies to the extension and to this website.
+      </p>
+
+      <h2>The short version</h2>
+      <p>
+        Scans happen inside your browser. Page content, page source, found secrets, URLs and findings never
+        leave your machine. The only network call the extension makes is a licence check, which sends a
+        licence key and a random install id.
+      </p>
+
+      <h2>What is stored on your device</h2>
+      <p>Kept in <code>chrome.storage</code> and never transmitted:</p>
+      <ul>
+        <li>the name you give your blob, synced with your Chrome profile</li>
+        <li>your licence key, plan, expiry and a random install id</li>
+        <li>the origins you have verified, and the verification token for each</li>
+        <li>for Pro users only: saved scan history and findings</li>
+      </ul>
+      <p>Uninstalling the extension removes all of it.</p>
+
+      <h2>What leaves your browser</h2>
+      <ul>
+        <li>
+          <strong>Licence checks.</strong> On startup and when you activate a key, the extension sends your
+          licence key and install id to our licence service. Nothing else. No page data, no URLs, no findings.
+        </li>
+        <li>
+          <strong>Payments.</strong> Card, M-Pesa, Airtel Money and bank transfers are handled by
+          <strong>Paystack</strong> on its own hosted checkout page. Paystack is the payment processor and
+          holds your payment details. We receive the payment event and the email address used at checkout.
+          That address is what a licence is tied to.
+        </li>
+        <li>
+          <strong>Key delivery.</strong> After payment, Paystack returns you to our claim page, which checks
+          the transaction with Paystack and shows your licence key once. Only a hash of the key is stored,
+          so it cannot be shown again. We do not store the key itself.
+        </li>
+      </ul>
+      <p>Nothing else is collected. No analytics, no advertising, no telemetry, no crash reporting.</p>
+
+      <h2>What a scan reads</h2>
+      <ul>
+        <li>
+          With the page you have open, after you click the extension icon: the rendered page, its scripts,
+          forms, links, images, styles and response headers.
+        </li>
+        <li>
+          For deeper scans only, on origins you verify by publishing a token: read-only GET and HEAD requests
+          to that same origin, rate limited, at most 40 per scan, stoppable at any time.
+        </li>
+      </ul>
+      <p>Deeper scans never run on a site you have not verified.</p>
+
+      <h2>Secrets</h2>
+      <p>
+        If the scan finds something that looks like a credential in page source, the value is masked in the
+        report, for example <code>sk-...a3f9</code>. Full secrets are never displayed, never stored, and
+        never sent anywhere.
+      </p>
+
+      <h2>This website</h2>
+      <p>
+        The site is static. It sets no cookies, loads no third-party scripts, and uses no analytics. Server
+        logs at our host record the usual request metadata (IP address, user agent, requested path) for
+        security and abuse prevention.
+      </p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>Deactivate a browser in Settings to release an activation slot.</li>
+        <li>Delete saved scans in the extension, or uninstall to remove everything local.</li>
+        <li>
+          Ask us to delete the licence record tied to your email address by writing to
+          <a href="mailto:maverick.develops@gmail.com">maverick.develops@gmail.com</a>.
+        </li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>
+        LaunchPal is not directed at children and collects no personal information from anyone.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If this policy changes, the date at the top changes with it, and the Chrome Web Store listing is
+        updated to match.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:maverick.develops@gmail.com">maverick.develops@gmail.com</a><br />
+        Maverick, Nairobi, Kenya
+      </p>
+
+      <footer>
+        LaunchPal is a product of Maverick. Payments are processed by Paystack.
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+# LaunchPal
+
+> LaunchPal is a Chrome extension that audits a website built with AI tools. It finds what breaks a launch: API keys leaked into the page bundle, forms that post to a dead endpoint, missing security headers, exposed .env and .git files, broken meta tags, unsafe mobile layout. Every finding comes with a paste-ready fix prompt for Cursor, Claude Code or Lovable.
+
+LaunchPal is built by Maverick in Nairobi, Kenya. Payments are processed by Paystack. Prices are in Kenyan shillings (KES).
+
+## What it checks
+
+- Leaked secrets in the page and its scripts: Stripe, OpenAI, AWS, GitHub, Slack, SendGrid, Firebase, Supabase service role, Google API keys, private key blocks, plus generic high-entropy strings
+- Form health: accepting anything, no spam protection, placeholder endpoints, endpoints that error, no success or error message
+- Security headers: HTTPS, HSTS, content security policy, CSP weaknesses, framing protection, mixed content
+- Exposed files: .env variants, .git/config, .git/HEAD, .DS_Store, backup and dump files, db.sqlite
+- Open data: unauthenticated Firebase Realtime Database, CORS exposure, unauthenticated API endpoints
+- Form abuse: missing rate limiting, unbounded field lengths
+- Launch basics and SEO: title, description, social preview tags, favicon, placeholder text, H1, canonical, robots, sitemap, structured data
+- Mobile and accessibility: viewport, heading hierarchy
+
+## What it does not do
+
+It is not a penetration test. It does not test for SQL injection, remote code execution, cross-site scripting payloads, SSRF, deserialization, denial of service or open ports, because those require sending attack traffic to a server rather than reading a page. It reports what a browser can see, and nothing else.
+
+## Privacy
+
+Secrets are detected locally in the browser and masked before display. A free scan on a site you do not own sends nothing. A deeper scan only runs on an origin the user has verified by publishing a token, and it is limited to 40 read-only GET and HEAD requests per scan, 350 ms apart.
+
+## Pricing
+
+- 30-day pass: KES 500, one time, no renewal. Works on 2 browsers.
+- Pro, monthly: KES 1,500 per month. Cancel any time.
+- Pro, annual: KES 12,000 per year.
+- Free tier: full scan and score, 3 fix prompts per scan, no account.
+
+## Where to buy
+
+- 30-day pass: https://paystack.shop/pay/kvbv5saee6
+- Pro, monthly: https://paystack.shop/pay/yrp0skuv69
+- Pro, annual: https://paystack.shop/pay/j--e93el9a
+
+## Links
+
+- Site: https://launchpal-site.pages.dev/
+- Privacy policy: https://launchpal-site.pages.dev/privacy.html
+- Support: maverick.develops@gmail.com
